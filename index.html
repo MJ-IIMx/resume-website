@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahir Jain | Professional Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(255, 255, 255, 0.88);
+            --primary: #6366f1;
+            --accent: #a855f7;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 3rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        /* Monogram Logo */
+        .logo {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #94a3b8;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero p {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: #ede9fe;
+            color: #6d28d9;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2.2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.6rem;
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateX(4px);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+            color: #4338ca;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">MJ</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero" id="about">
+            <h1>Mahir Jain</h1>
+            <p>Dual-Degree BBA Scholar | IIM Bangalore & IIM Udaipur</p>
+            <div class="contact-badge">📍 India &nbsp;|&nbsp; ✉️ mahir.jain26@iimb.ac.in</div>
+        </div>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>🎓 Education</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Bachelor of Business Administration (Digital Business & Entrepreneurship)</h3>
+                    <p><strong>Indian Institute of Management Bangalore (IIMB)</strong> | Batch 3 (2026–2029)</p>
+                    <p style="margin-top: 0.3rem;">Focusing on digital business architectures, web development foundations, business analytics, and modern enterprise strategy.</p>
+                </div>
+                <div class="card">
+                    <h3>Bachelor of Business Administration (BBA)</h3>
+                    <p><strong>Indian Institute of Management Udaipur (IIMU)</strong> | Dual Degree Program (Year 1)</p>
+                    <p style="margin-top: 0.3rem;">Focusing on core management principles, economic foundations, and organizational structures.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>🚀 Featured Project</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Responsive Personal Portfolio & Resume Website</h3>
+                    <p>Engineered and deployed an interactive professional web portfolio utilizing modern CSS3 (Flexbox positioning, Google Typography, glassmorphism UI components, and custom root variables) hosted live via GitHub Pages.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>⚡ Core Competencies</h2>
+            <ul class="skills-list">
+                <li>HTML5 & CSS3 Styling</li>
+                <li>Digital Strategy & Business Analysis</li>
+                <li>Advanced Time Management</li>
+                <li>Problem Solving & Critical Thinking</li>
+                <li>Git & GitHub Version Control</li>
+                <li>Spreadsheet Modeling & Data Insights</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahir Jain. All rights reserved. Built for IIMB Web Development Module.</p>
+    </footer>
+
+</body>
+</html>
+
